@@ -7,10 +7,11 @@ def RPI(paises, pais_novo):
 
 def RPF(paises, pais_novo):
     paises.insert_at_end(pais_novo)
-    return
+    return paises.traverse_list()
 
-def RPDE():
-    pass
+def RPDE(paises, pais_novo, pais_registado):
+    paises.insert_after_item(pais_novo, pais_registado)
+    return paises.traverse_list()
 
 def RPAE():
     pass

@@ -14,13 +14,16 @@ def main():
 
         elif menu[0] == "RPI":
             pais_novo = menu[1]
-            RPI(paises, pais_novo)
+            c.RPI(paises, pais_novo)
 
         elif menu[0] == "RPF":
-            pass
+            pais_novo = menu[1]
+            c.RPF(paises, pais_novo)
 
         elif menu[0] == "RPDE":               
-            pass
+            pais_novo = menu[1]
+            pais_registado = menu[2]
+            c.RPDE(paises, pais_novo, pais_registado)
 
         elif menu[0] == "RPDA":
             pass
@@ -42,6 +45,3 @@ def main():
 
         elif menu[0] == "EP":
             pass
-
-def RPI(paises, pais_novo):
-    c.RPI(paises, pais_novo)
