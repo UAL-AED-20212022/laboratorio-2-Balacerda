@@ -1,5 +1,4 @@
 from models.Node import Node
-
 class LinkedList:
     def __init__(self):
         self.start_node = None
@@ -110,7 +109,7 @@ class LinkedList:
                 print("Item found")
                 return True
             n = n.ref
-        print("item bot found")
+        print("item not found")
         return False
 
 
