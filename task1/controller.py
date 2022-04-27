@@ -1,6 +1,5 @@
 import models.LinkedList as l
 
-
 def RPI(paises, pais_novo):
     paises.insert_at_start(pais_novo)
     return paises.traverse_list()
@@ -10,23 +9,31 @@ def RPF(paises, pais_novo):
     return paises.traverse_list()
 
 def RPDE(paises, pais_novo, pais_registado):
-    paises.insert_after_item(pais_novo, pais_registado)
+    paises.insert_after_item(pais_registado, pais_novo)
     return paises.traverse_list()
 
-def RPAE():
-    pass
+def RPAE(paises, pais_novo, pais_registado):
+    paises.insert_before_item(pais_registado, pais_novo)
+    return paises.traverse_list()
 
-def RPII():
-    pass
+def RPII(paises, pais_novo, indice: int):
+    paises.insert_at_index(indice, pais_novo)
+    return paises.traverse_list()
 
-def VNE():
-    pass
+def VNE(paises):
+    return print(f"O número de elementos são {paises.get_count()}")
 
-def VP():
-    pass
+def VP(paises, nome_pais):
+    if (paises.search_item(nome_pais) == False):
+        return print(f"O país {nome_pais} não se encontra na lista")
+    elif (paises.search_item(nome_pais) == True):
+        return print(f"O país {nome_pais} encontra-se na lista")
 
-def EPE():
-    pass
+def EPE(paises):
+    primeiro_elemento = paises.start_node.item
+    paises.delete_at_start()
+    paises.traverse_list()
+    return print(f"O país {primeiro_elemento} foi eliminado da lista")
 
 def EUE():
     pass

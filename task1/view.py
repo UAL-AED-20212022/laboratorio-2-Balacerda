@@ -25,20 +25,25 @@ def main():
             pais_registado = menu[2]
             c.RPDE(paises, pais_novo, pais_registado)
 
-        elif menu[0] == "RPDA":
-            pass
+        elif menu[0] == "RPAE":
+            pais_novo = menu[1]
+            pais_registado = menu[2]
+            c.RPAE(paises, pais_novo, pais_registado)
 
         elif menu[0] == "RPII":
-            pass 
+            pais_novo = menu[1]
+            indice = int(menu[2])
+            c.RPII(paises, pais_novo, indice)
 
         elif menu[0] == "VNE":
-            pass
+            c.VNE(paises)
  
         elif menu[0] == "VP":
-            pass
+            nome_pais = menu[1]
+            c.VP(paises, nome_pais)
 
         elif menu[0] == "EPE":
-            pass
+            c.EPE(paises)
 
         elif menu[0] == "EUE":
             pass
