@@ -46,7 +46,8 @@ def main():
             c.EPE(paises)
 
         elif menu[0] == "EUE":
-            pass
+            c.EUE(paises)
 
         elif menu[0] == "EP":
-            pass
+            nome_pais = menu[1]
+            c.EP(paises, nome_pais)

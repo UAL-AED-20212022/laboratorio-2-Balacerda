@@ -1,4 +1,4 @@
-import models.LinkedList as l
+import models.LinkedList as paises
 
 def RPI(paises, pais_novo):
     paises.insert_at_start(pais_novo)
@@ -32,11 +32,16 @@ def VP(paises, nome_pais):
 def EPE(paises):
     primeiro_elemento = paises.start_node.item
     paises.delete_at_start()
-    paises.traverse_list()
     return print(f"O país {primeiro_elemento} foi eliminado da lista")
 
-def EUE():
-    pass
+def EUE(paises):
+    ultimo_elemento = paises.get_last_node()
+    paises.delete_at_end()
+    return print(f"O país {ultimo_elemento} foi eliminado da lista")
 
-def EP():
-    pass
+def EP(paises, nome_pais):
+    if (paises.search_item(nome_pais) == False):
+        return print(f"O país {nome_pais} não se encontra na lista")
+    elif (paises.search_item(nome_pais) == True):
+        paises.delete_element_by_value(nome_pais)
+        return print(f"O país {nome_pais} foi eliminado da lista") 
