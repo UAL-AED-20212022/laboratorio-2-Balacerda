@@ -1,4 +1,6 @@
-import models.LinkedList as paises
+from models.LinkedList import LinkedList
+paises = LinkedList()
+
 
 def RPI(paises, pais_novo):
     paises.insert_at_start(pais_novo)

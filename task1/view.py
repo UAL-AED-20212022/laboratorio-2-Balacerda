@@ -1,4 +1,3 @@
-from re import L
 import controller as c
 from models.LinkedList import LinkedList
 
